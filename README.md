@@ -37,5 +37,20 @@ spu.convert_to(expr_u, spu.m).n()
 3.05m
 ```
 
+## Partial derivatives
+I wrote a code to calculate the partial derivatives for all the variables of a function. This code can be helpful to determine the gradient of a function.
+
+Example, given the function:
+
+$$ f = \left(- l + \sqrt{\left(x_{1} - x_{2}\right)^{2} + \left(y_{1} - y_{2}\right)^{2} + \left(z_{1} - z_{2}\right)^{2}}\right)^{2} $$
+
+where _l_ is a constant and _x1, x2, y1, y2, z1, z2_ are the variables, the corresponding gradient is:
+
+$$ \nabla f = \left[ \frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2}, \frac{\partial f}{\partial y_1}, \frac{\partial f}{\partial y_2}, \frac{\partial f}{\partial z_1}, \frac{\partial f}{\partial z_2} \right] $$
+
+and the first of the 6 partial derivatives (_x1_) is:
+
+$$ \frac{\partial f}{\partial x_1} = \frac{2 \left(- l + \sqrt{\left(x_{1} - x_{2}\right)^{2} + \left(y_{1} - y_{2}\right)^{2} + \left(z_{1} - z_{2}\right)^{2}}\right) \left(x_{1} - x_{2}\right)}{\sqrt{\left(x_{1} - x_{2}\right)^{2} + \left(y_{1} - y_{2}\right)^{2} + \left(z_{1} - z_{2}\right)^{2}}} $$
+
 ## Resources
 A [playlist](https://www.youtube.com/playlist?list=PLSE7WKf_qqo1T5VV1nqXTj2iNiSpFk72T) of introductory videos.
